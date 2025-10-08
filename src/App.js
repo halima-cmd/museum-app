@@ -17,6 +17,7 @@ import {
   SoundOutlined,
 } from "@ant-design/icons";
 const App: React.FC = () => {
+ 
   const [activeTab, setActiveTab] = useState("home");
   const [selectedLanguage, setSelectedLanguage] = useState("fr");
   const [isPlaying, setIsPlaying] = useState(false);
@@ -80,6 +81,11 @@ const App: React.FC = () => {
       hasVideo: false,
     },
   ];
+
+
+
+
+
   const filteredArtworks =
     selectedCategory === "all"
       ? artworks
@@ -89,7 +95,12 @@ const App: React.FC = () => {
       {/* Header */}
       <div className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 px-4 py-3 flex justify-between items-center">
         <div className="text-xl font-bold text-gray-900">
-          Musée du Patrimoine
+        <img
+  src="/Logo_MCN.png"
+  alt="Musée du Patrimoine"
+  className="w-12 h-auto"
+/>
+
         </div>
         <div className="flex items-center gap-3">
           <button
@@ -98,18 +109,17 @@ const App: React.FC = () => {
           >
             <GlobalOutlined className="text-lg" />
           </button>
-          <button className="p-2 rounded-full hover:bg-gray-100 cursor-pointer">
-            <MenuOutlined className="text-lg" />
-          </button>
+      
         </div>
       </div>
       {/* Hero Section */}
       <div className="relative h-96 overflow-hidden mt-16">
-        <img
-          src="https://readdy.ai/api/search-image?query=Modern%20African%20museum%20exterior%20architecture%2C%20contemporary%20cultural%20building%20with%20traditional%20elements%2C%20beautiful%20facade%20with%20warm%20lighting%2C%20professional%20architectural%20photography%2C%20clear%20blue%20sky%20background%2C%20centered%20composition%2C%20cultural%20heritage%20institution&width=375&height=384&seq=museum001&orientation=landscape"
-          alt="Musée du Patrimoine"
-          className="w-full h-full object-cover object-top"
-        />
+      <img
+  src="/muse.jpg"
+  alt="Musée du Patrimoine"
+  className="w-full h-full object-cover object-top"
+/>
+
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
         <div className="absolute bottom-8 left-4 right-4 text-white">
           <h1 className="text-3xl font-bold mb-2">
@@ -222,7 +232,7 @@ const App: React.FC = () => {
         {/* Artwork Image */}
         <div className="relative h-80 overflow-hidden">
           <img
-            src="https://readdy.ai/api/search-image?query=Traditional%20African%20Gelede%20mask%2C%20wooden%20carved%20ceremonial%20mask%20with%20intricate%20geometric%20patterns%2C%20vibrant%20colors%2C%20museum%20quality%20artifact%2C%20professional%20photography%20lighting%2C%20isolated%20on%20white%20background%2C%20centered%20composition%2C%20cultural%20heritage%20piece%2C%20detailed%20craftsmanship&width=375&height=320&seq=maskdetail001&orientation=landscape"
+            src="/masque.jpg"
             alt="Masque Gelede"
             className="w-full h-full object-cover object-top"
           />
@@ -302,18 +312,7 @@ const App: React.FC = () => {
               </div>
             </div>
           </div>
-          {/* Accessibility */}
-          <div className="bg-blue-50 rounded-2xl p-4">
-            <div className="flex items-center gap-3">
-              <SoundOutlined className="text-blue-600" />
-              <div>
-                <div className="font-semibold text-blue-900">Mode Inclusif</div>
-                <div className="text-sm text-blue-700">
-                  Audio-description disponible
-                </div>
-              </div>
-            </div>
-          </div>
+       
         </div>
       </div>
     </div>
@@ -556,13 +555,10 @@ const App: React.FC = () => {
         <div className="px-4 py-6">
           {/* Introduction */}
           <h1 className="text-2xl font-bold text-gray-900 mb-4">
-            Notre Mission
+          Notre Mission
           </h1>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Depuis 1985, le Musée du Patrimoine s'engage à préserver, étudier et
-            valoriser la richesse culturelle africaine. Notre collection de plus
-            de 2000 œuvres témoigne de la diversité et de la beauté des arts
-            traditionnels du continent.
+          Projet au long cours, pensé tour à tour par un militant anticolonialiste (Lamine Senghor), un penseur de la négritude (Léopold Sedar Senghor) et un chantre de la renaissance africaine (Abdoulaye Wade), le Musée des Civilisations noires (MCN) a été inauguré le 6 décembre 2018 par le Président Macky Sall. Le MCN œuvre depuis lors pour la valorisation de l’apport des Civilisations noires au patrimoine universel de l’humanité. Ainsi, le visiteur qui franchit la porte de la case à impluvium qui a inspiré son architecture rencontre tout autour du grand Baobab de l’artiste haïtien Edouard Duval-Carrié, l’exposition : l’Afrique, berceau de l’humanité.
           </p>
           {/* Timeline */}
           <h2 className="text-xl font-semibold text-gray-900 mb-4">
@@ -571,11 +567,11 @@ const App: React.FC = () => {
           <div className="space-y-4 mb-8">
             <div className="flex gap-4">
               <div className="w-12 h-12 bg-[#ff5800] rounded-full flex items-center justify-center text-white font-bold text-sm">
-                1985
+              2018
               </div>
               <div className="flex-1">
                 <h3 className="font-semibold text-gray-900">
-                  Fondation du Musée
+                  Inauguration du Musée
                 </h3>
                 <p className="text-sm text-gray-600">
                   Création par un collectif d'historiens et d'artistes
@@ -584,7 +580,7 @@ const App: React.FC = () => {
             </div>
             <div className="flex gap-4">
               <div className="w-12 h-12 bg-[#ffbe99] rounded-full flex items-center justify-center text-gray-700 font-bold text-sm">
-                1995
+               2020
               </div>
               <div className="flex-1">
                 <h3 className="font-semibold text-gray-900">
@@ -597,7 +593,7 @@ const App: React.FC = () => {
             </div>
             <div className="flex gap-4">
               <div className="w-12 h-12 bg-[#ffbe99] rounded-full flex items-center justify-center text-gray-700 font-bold text-sm">
-                2010
+                2023
               </div>
               <div className="flex-1">
                 <h3 className="font-semibold text-gray-900">Modernisation</h3>
@@ -608,11 +604,11 @@ const App: React.FC = () => {
             </div>
             <div className="flex gap-4">
               <div className="w-12 h-12 bg-[#ff5800] rounded-full flex items-center justify-center text-white font-bold text-sm">
-                2024
+                2025
               </div>
               <div className="flex-1">
                 <h3 className="font-semibold text-gray-900">
-                  Application Mobile
+                  Application web / Mobile
                 </h3>
                 <p className="text-sm text-gray-600">
                   Lancement de l'expérience digitale immersive
